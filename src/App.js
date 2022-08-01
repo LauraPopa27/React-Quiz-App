@@ -32,14 +32,25 @@ export default function App() {
 			],
 		},
 		{
-			questionText: 'How many Harry Potter books are there?',
+			questionText: 'Which of the following animals can run the fastest?',
 			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: 'Leopard', isCorrect: false },
+				{ answerText: 'Tiger', isCorrect: false },
+				{ answerText: 'Lion', isCorrect: false },
+        { answerText: 'Cheetah', isCorrect: true },
 			],
 		},
+
+    {
+      questionText: 'The human body is made up of approximately how much water?',
+      answerOptions: [
+        {answerText: '40%', isCorrect: false},
+        {answerText: '50%', isCorrect: false},
+        {answerText: '60%', isCorrect: false},
+        {answerText: '70%', isCorrect: true},
+      ]
+
+    },
 	];
 
   const [currentQuestion, setCurrentQuestion]= useState(0);
@@ -70,7 +81,8 @@ export default function App() {
     <div className='app'>
     {}
     {showScore ? (
-      <div className='score-section'>You scored {score} out of {questions.length}</div>
+      <div className='score-section'>You scored {score} out of {questions.length}.</div>
+      
     ) : (
       <>
         <div className='question-section'>
